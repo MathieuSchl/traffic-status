@@ -2,13 +2,12 @@ name: "Get traffic"
 run-name: "Get traffic : ${{ github.actor }} push '${{ github.event.head_commit.message }}' 🚀"
 on:
   push:
+  schedule:
+    - cron: "*/15 * * * *"
 
 jobs:
-  CreateTag:
+  GetTraffic:
     runs-on: ubuntu-latest
-    permissions: write-all
-    env:
-      version: "1.0.0"
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
