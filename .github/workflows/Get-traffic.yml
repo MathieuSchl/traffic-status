@@ -1,5 +1,5 @@
 name: "Get traffic"
-run-name: "Get traffic : ${{ github.actor }} push '${{ github.event.head_commit.message }}' 🚀"
+run-name: "Get traffic : Scheduled job"
 on:
   push:
   schedule:
