@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "startHeadless": "HEADLESS=true node index.js"
   },
   "author": "CodyIsTheSenate",
   "license": "MIT",

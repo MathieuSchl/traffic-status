@@ -50,7 +50,7 @@ async function start(){
     }
 
     // Launch the browser and open a new blank page
-    const browser = await puppeteer.launch({headless: false});//{headless: false}
+    const browser = await puppeteer.launch({headless: process.env.HEADLESS === undefined ? false: true});//{headless: false}
 
     // Traffic
     const trafficList = Object.keys(jobs.traffic);
@@ -71,7 +71,7 @@ async function start(){
         const researchList = [];
 
         for (let index = 0; index < trafficList.length; index++) {
-            if(researchList.length>=2) {
+            if(researchList.length>=5) {
                 await readResult(jobs, researchList[0]);
                 researchList.splice(0, 1);
             }

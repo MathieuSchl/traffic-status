@@ -19,4 +19,4 @@ jobs:
           npm install
       - name: Get traffic
         run: |
-          npm run start
+          npm run startHeadless
