@@ -2,8 +2,8 @@ name: "Get traffic"
 run-name: "Get traffic : Scheduled job"
 on:
   push:
-  schedule:
-    - cron: "*/15 * * * *"
+  #schedule:
+  #  - cron: "*/15 * * * *"
 
 jobs:
   GetTraffic:
